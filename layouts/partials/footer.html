@@ -1,9 +1,4 @@
 <div id="footer" >
-  <div class="line">
-    <span></span>
-    {{ $authorImg := (.Site.Params.AuthorImg | default "img/author.jpg") }}
-    <div style='background:no-repeat url("{{ .Site.BaseURL }}{{ $authorImg }}") left top;-webkit-background-size:6.875em 6.875em;-moz-background-size:6.875em 6.875em;background-size:6.875em 6.875em;' class="author" ></div>
-  </div>
   <section class="info">
     <p>{{ .Site.Params.BottomIntroduce | default "" | safeHTML }}</p>
   </section>
