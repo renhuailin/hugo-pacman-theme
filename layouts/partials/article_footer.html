@@ -4,4 +4,24 @@
     <div data-url="{{ .Permalink }}" data-title="{{ .Title }}" data-tsina="{{ .Site.Params.WeiboID }}" class="share clearfix">
     </div>
   </div>
+  {{- with .Site.Params.comments.giscus -}}
+  <script src="https://giscus.app/client.js"
+      data-repo="{{- .repo -}}"
+      data-repo-id="{{- .repoID -}}"
+      data-category="{{- .category -}}"
+      data-category-id="{{- .categoryID -}}"
+      data-mapping="{{- .mapping -}}"
+      data-strict="0"
+      data-reactions-enabled="{{- .reactionsEnabled -}}"
+      data-emit-metadata="{{- .emitMetadata -}}"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="{{- .lang -}}"
+      data-loading="{{- .lazy -}}"
+      crossorigin="anonymous"
+      data-swup-reload-script
+      async
+  >
+  </script>
+  {{- end -}}
 </footer>
